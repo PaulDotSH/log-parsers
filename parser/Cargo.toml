@@ -1,0 +1,20 @@
+[package]
+name = "parser"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+walkdir = "2.3.3"
+anyhow = "1.0.70"
+serde = { version = "1.0.160", features = ["derive"] }
+serde_json = { version = "1.0.96", features = ["default"] }
+rand = "0.8.5"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
+#panic = "abort"
+#opt-level = "z"

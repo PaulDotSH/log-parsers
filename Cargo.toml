@@ -1,0 +1,7 @@
+[workspace]
+members = ["cleaner", "parser", "reparser", "deduper"]
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
