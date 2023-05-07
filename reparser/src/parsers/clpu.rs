@@ -17,7 +17,7 @@ impl LogParser for ClpuParser {
     fn get_parser_tokens(line: &str) -> Option<Vec<&str>> {
         let tokens: Vec<&str> = line.splitn(3,':').collect();
 
-        if tokens.len() != 3 {
+        if tokens.len() != 3 || line.chars().filter(|ch| *ch == ':').count() > 5 {
             return None;
         }
         if !tokens[2].contains('.') {

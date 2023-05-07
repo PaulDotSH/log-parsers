@@ -1,5 +1,5 @@
 [workspace]
-members = ["cleaner", "parser", "reparser", "deduper"]
+members = ["cleaner", "parser", "reparser", "deduper", "merger"]
 
 [profile.release]
 strip = true
